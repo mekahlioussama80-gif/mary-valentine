@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 For Mary</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- LOTS OF Floating hearts with romantic names -->
+    <div class="floating-hearts">
+        <div class="heart heart-1">💕<span class="name">Mary</span></div>
+        <div class="heart heart-2">❤️<span class="name">Maria</span></div>
+        <div class="heart heart-3">💗<span class="name">Habibi</span></div>
+        <div class="heart heart-4">💖<span class="name">Omrum</span></div>
+        <div class="heart heart-5">💕<span class="name">Mary</span></div>
+        <div class="heart heart-6">❤️<span class="name">Maria</span></div>
+        <div class="heart heart-7">💗<span class="name">Habibi</span></div>
+        <div class="heart heart-8">💖<span class="name">Omrum</span></div>
+        <div class="heart heart-9">💕<span class="name">Mary</span></div>
+        <div class="heart heart-10">❤️<span class="name">Maria</span></div>
+        <div class="heart heart-11">💗<span class="name">Habibi</span></div>
+        <div class="heart heart-12">💖<span class="name">Omrum</span></div>
+        <div class="heart heart-13">💕<span class="name">Mary</span></div>
+        <div class="heart heart-14">❤️<span class="name">Maria</span></div>
+        <div class="heart heart-15">💗<span class="name">Habibi</span></div>
+        <div class="heart heart-16">💖<span class="name">Omrum</span></div>
+        <div class="heart heart-17">💕<span class="name">My Love</span></div>
+        <div class="heart heart-18">❤️<span class="name">Beautiful</span></div>
+        <div class="heart heart-19">💗<span class="name">Mary</span></div>
+        <div class="heart heart-20">💖<span class="name">Maria</span></div>
+        <div class="heart heart-21">💕<span class="name">Habibi</span></div>
+        <div class="heart heart-22">❤️<span class="name">Omrum</span></div>
+        <div class="heart heart-23">💗<span class="name">Mary</span></div>
+        <div class="heart heart-24">💖<span class="name">Maria</span></div>
+    </div>
+
+    <div class="page-wrapper index-page">
+        <div class="romantic-container compact">
+            <div class="top-decoration">✨ 💕 ✨</div>
+            
+            <h2 class="romantic-greeting">Hey there, beautiful</h2>
+            <h1 class="romantic-question">Will you be my Valentine?</h1>
+            
+            <div class="love-message">
+                You mean everything to me, Mary 💕
+            </div>
+            
+            <div class="calendar-decoration">
+                <div class="calendar-icon">📅</div>
+                <div class="calendar-date">February 14</div>
+            </div>
+            
+            <div class="romantic-buttons">
+                <button class="romantic-btn btn-yes" onclick="window.location.href='/gifts'">
+                    Yes, I'd love to! 💖
+                </button>
+                <button class="romantic-btn btn-no" id="noBtn">
+                    Maybe not...
+                </button>
+            </div>
+            
+            <div class="bottom-decoration">~ From Ossy with love ~</div>
+        </div>
+    </div>
+    
+    <script>
+        let noClicks = 0;
+        const noBtn = document.getElementById('noBtn');
+        const message = document.querySelector('.love-message');
+        
+        const sadMessages = [
+            "Please? You're breaking my heart 🥺",
+            "Are you sure? I'll be so sad 💔",
+            "Think about all our memories together 😢",
+            "I promise to make it special! 🙏",
+            "Just say yes, mi amor 💕",
+            "You're the only one for me 😭",
+            "One more chance, please? 🥺"
+        ];
+        
+        noBtn.addEventListener('click', function() {
+            noClicks++;
+            
+            if (noClicks <= sadMessages.length) {
+                message.textContent = sadMessages[noClicks - 1];
+                message.style.color = '#d63d65';
+            }
+            
+            noBtn.style.transform = `scale(${Math.max(0.3, 1 - noClicks * 0.15)})`;
+            document.querySelector('.btn-yes').style.transform = `scale(${1 + noClicks * 0.15})`;
+            
+            if (noClicks > 3) {
+                noBtn.style.position = 'relative';
+                noBtn.style.left = (Math.random() * 60 - 30) + 'px';
+                noBtn.style.top = (Math.random() * 60 - 30) + 'px';
+            }
+            
+            if (noClicks > 7) {
+                noBtn.style.opacity = '0';
+                noBtn.style.pointerEvents = 'none';
+                message.textContent = "I knew you'd say yes! Only one button left 💕";
+            }
+        });
+    </script>
+</body>
+</html>

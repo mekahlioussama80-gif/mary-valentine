@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💝 For Mary 💝</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Floating hearts -->
+    <div class="hearts-bg"></div>
+
+    <!-- SCREEN 1: Initial Question -->
+    <div class="screen active" id="screen1">
+        <div class="card">
+            <div class="cute-bunnies">🐰💕🐰</div>
+            <h1 class="main-title">Hey there,</h1>
+            <h2 class="question-text">Will you be my Valentine?</h2>
+            <div class="calendar-icon">
+                📅<br>
+                <span class="date-text">14<br>FEB</span>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-yes" id="yesBtn">YES OF COURSE</button>
+                <button class="btn btn-no" id="noBtn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCREEN 2: Yay! Choose a gift -->
+    <div class="screen" id="screen2">
+        <div class="card">
+            <div class="celebration-emoji">❤️</div>
+            <h1 class="yay-title">Yay, you said yes!</h1>
+            <p class="subtitle-text">I made all these for you hehe</p>
+            
+            <div class="gifts-container">
+                <button class="gift-box" data-gift="1">
+                    <span class="gift-label">Gift 1</span>
+                </button>
+                <button class="gift-box" data-gift="2">
+                    <span class="gift-label">Gift 2</span>
+                </button>
+                <button class="gift-box" data-gift="3">
+                    <span class="gift-label">Gift 3</span>
+                </button>
+            </div>
+            
+            <div class="hearts-decoration">💕</div>
+        </div>
+    </div>
+
+    <!-- SCREEN 3: Gift 1 - Love Letter -->
+    <div class="screen" id="gift1">
+        <div class="card gift-card">
+            <button class="back-btn" onclick="goBack()">← Back</button>
+            
+            <div class="letter-container">
+                <div class="letter-header">
+                    <div class="cute-cat">😺💕</div>
+                    <h2 class="gift-title">A Letter for You</h2>
+                </div>
+                
+                <div class="letter-paper">
+                    <p class="letter-text">
+                        To the love of my life,
+                    </p>
+                    <p class="letter-text highlight">
+                        You make my life so meaningful and I am so lucky to have you as my valentine this year.
+                    </p>
+                    <p class="letter-text highlight">
+                        I love you wholeheartedly and I can't wait to continue loving you for the rest of my life.
+                    </p>
+                    <p class="letter-text">
+                        I know I tell you this everyday but you are literally the most beautiful girl I know.
+                    </p>
+                    <p class="letter-text highlight">
+                        Anyways, I love you. Always, Forever
+                    </p>
+                    <p class="letter-signature">— Ossy 💖</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCREEN 4: Gift 2 - Bouquet -->
+    <div class="screen" id="gift2">
+        <div class="card gift-card">
+            <button class="back-btn" onclick="goBack()">← Back</button>
+            
+            <div class="bouquet-container">
+                <div class="frame">
+                    <div class="bouquet">🌹🌹🌹<br>🌹🌹🌹<br>🌹🌹🌹</div>
+                    <div class="ribbon">🎀</div>
+                </div>
+                
+                <div class="love-notes">
+                    <div class="note note1">
+                        I always love you<br>no matter what<br>❤️💕❤️
+                    </div>
+                    <div class="note note2">
+                        You will forever be my<br>only option.<br>💕
+                    </div>
+                    <div class="note note3">
+                        I can't imagine a life<br>without you in it.<br>💕
+                    </div>
+                    <div class="note note4">
+                        You are the best part<br>of my life<br>💕
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCREEN 5: Gift 3 - QR Code -->
+    <div class="screen" id="gift3">
+        <div class="card gift-card">
+            <button class="back-btn" onclick="goBack()">← Back</button>
+            
+            <div class="qr-container">
+                <div class="envelope-icon">💌</div>
+                <h2 class="qr-title">A song for you</h2>
+                
+                <div class="qr-box">
+                    <p class="scan-text">Scan the QR code!</p>
+                    <div class="qr-code">
+                        <!-- QR Code will be generated here -->
+                        <div id="qrcode"></div>
+                    </div>
+                    <p class="or-text">or</p>
+                    <a href="YOUR_SPOTIFY_LINK_HERE" target="_blank" class="click-link">Click to listen →</a>
+                </div>
+                
+                <div class="hearts-around">💕 💖 💕</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
